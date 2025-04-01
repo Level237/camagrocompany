@@ -32,7 +32,7 @@ const Hero = () => {
               </span>
             </div>
             
-            <h1 className="text-xl md:text-6xl font-bold leading-tight">
+            <h1 className="text-xl md:text-5xl font-bold leading-tight">
               Solutions Naturelles pour une Terre Plus Saine
             </h1>
             
