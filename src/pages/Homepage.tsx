@@ -1,13 +1,29 @@
-
+import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 import Navbar from "@/components/layout/Navbar"
 import Hero from "@/components/sections/Hero"
+import Loader from "@/components/ui/Loader"
 
 const Homepage = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    // Simuler un temps de chargement
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 2000) // 2 secondes de chargement
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (isLoading) {
+    return <Loader />
+  }
+
   return (
     <div className="min-h-screen">
-         <Navbar/>
+      <Navbar />
       <Hero />
       {/* Hero Section */}
 
