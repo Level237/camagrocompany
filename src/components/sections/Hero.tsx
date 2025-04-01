@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Leaf, Sprout, Sun } from "lucide-react"
-
+import hero from "@/assets/hero.jpg"
 const Hero = () => {
   return (
     <div className="relative py-24 min-h-screen bg-gradient-to-b from-[#1B5E20] to-[#2E7D32] overflow-hidden">
@@ -32,7 +32,7 @@ const Hero = () => {
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            <h1 className="text-xl md:text-6xl font-bold leading-tight">
               Solutions Naturelles pour une Terre Plus Saine
             </h1>
             
@@ -100,7 +100,15 @@ const Hero = () => {
               </motion.div>
 
               {/* Cercle principal */}
-              <div className="absolute inset-10 bg-white/20 backdrop-blur-sm rounded-full" />
+              <div className="absolute inset-12 bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-md rounded-full overflow-hidden shadow-[0_0_50px_rgba(255,255,255,0.2)] border border-white/30">
+                <div className="absolute inset-0 bg-gradient-to-t from-green-500/20 to-transparent mix-blend-overlay"></div>
+                <img 
+                  src={hero} 
+                  alt="Agriculture durable"
+                  className="w-full h-full object-cover scale-[1.02] hover:scale-[1.05] transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-white/10 mix-blend-overlay"></div>
+              </div>
             </div>
           </motion.div>
         </div>
