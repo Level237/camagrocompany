@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+
 import Navbar from "@/components/layout/Navbar"
 import Hero from "@/components/sections/Hero"
 
@@ -10,18 +10,7 @@ const Homepage = () => {
          <Navbar/>
       <Hero />
       {/* Hero Section */}
-     
-      <section className="py-20  px-4 bg-gradient-to-b from-green-50 to-white">
-      
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <Badge className="mb-4 bg-green-100 text-green-800">Eco-responsable</Badge>
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">Solutions Naturelles pour une Agriculture Durable</h1>
-            <p className="text-xl text-gray-600 mb-8">Des engrais 100% naturels pour une terre plus saine et productive</p>
-            <Button className="bg-[#2E7D32] hover:bg-[#1B5E20]">Découvrir nos produits</Button>
-          </div>
-        </div>
-      </section>
+
 
       {/* Services Section */}
       <section className="py-16 px-4">
