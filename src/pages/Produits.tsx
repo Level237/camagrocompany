@@ -8,9 +8,7 @@ import Loader from '@/components/ui/Loader';
 import { useEffect } from 'react';
 import engrais from "@/assets/engrais.jpg"
 import phyto from "@/assets/phyto.jpg"
-const categories = [
-  "Engrais", "Pesticides", "Semences", "Équipements"
-];
+
 
 const Produits = () => {
   
@@ -54,7 +52,7 @@ const Produits = () => {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-white text-xl font-semibold mb-2">NPK 20-10-10</h3>
+                <h3 className="text-white text-xl font-semibold mb-2">Engrais</h3>
                 <p className="text-gray-200 text-sm">
                   Engrais composé idéal pour les cultures vivrières
                 </p>
