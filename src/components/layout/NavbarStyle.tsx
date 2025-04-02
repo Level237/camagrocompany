@@ -18,120 +18,135 @@ const NavbarStyle = () => {
 
   return (
     <>
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        className="fixed top-0 left-0 right-0 bg-white border-b border-gray-100 shadow-sm z-50"
-      >
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link to="/" className="flex items-center">
+         <motion.nav
+      initial={{ backgroundColor: "transparent" }}
+      animate={{
+        position: "fixed",
+        backgroundColor: "rgba(255, 255, 255, 0.95)",
+        backdropFilter: "blur(12px)",
+        boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+      }}
+      transition={{ duration: 0.3 }}
+      className="top-0 left-0 right-0 w-full z-50"
+    >
+      <div className="container mx-auto max-w-6xl px-4">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center space-x-2"
+          >
+            <Link 
+              to="/" 
+              className={`flex items-center space-x-2 transition-colors duration-300 
+                  text-[#2E7D32]
+              }`}
+            >
               <img src={logo} alt="logo" className="w-36 h-36" />
+              
             </Link>
+          </motion.div>
 
-            {/* Menu Desktop */}
-            <div className="hidden md:flex items-center space-x-2">
-              {navItems.map((item) => (
+          {/* Menu Desktop */}
+          <div className="hidden md:flex items-center space-x-1">
+            {navItems.map((item, index) => (
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
                 <Link
-                  key={item.name}
                   to={item.path}
-                  className={`px-4 py-2 rounded-lg text-gray-600 hover:text-green-600 hover:bg-green-50 transition-all duration-300 relative group ${
-                    location.pathname === item.path ? 'text-green-600' : ''
-                  }`}
+                  className={`px-4 py-2 rounded-full transition-all duration-300 
+                    text-[#2E7D32]
+                  `}
                 >
                   {item.name}
-                  {location.pathname === item.path && (
-                    <motion.div
-                      layoutId="navbar-indicator"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-600"
-                      initial={false}
-                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                    />
-                  )}
                 </Link>
-              ))}
+              </motion.div>
+            ))}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
               <Button 
-                className="ml-4 bg-green-600 hover:bg-green-700 text-white rounded-lg px-6"
+                className={`rounded-full px-6 
+                  bg-[#2E7D32] hover:bg-[#1B5E20] text-white`}
+              >
+                Contactez-nous
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* Menu Mobile */}
+          <motion.div 
+            className="md:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(!isOpen)}
+              className={`rounded-full 
+                text-gray-700`}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </Button>
+          </motion.div>
+        </div>
+
+        {/* Menu Mobile Dropdown */}
+        <motion.div
+          initial={false}
+          animate={isOpen ? { 
+            height: "auto", 
+            opacity: 1,
+            transition: {
+              height: { duration: 0.3 },
+              opacity: { duration: 0.2 }
+            }
+          } : { 
+            height: 0, 
+            opacity: 0,
+            transition: {
+              height: { duration: 0.3 },
+              opacity: { duration: 0.2 }
+            }
+          }}
+          className="md:hidden overflow-hidden"
+        >
+          <motion.div 
+            className={`py-4 px-2 rounded-2xl mb-4 backdrop-blur-lg 
+              bg-white shadow-lg`}
+          >
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`block px-4 py-3 rounded-xl transition-colors duration-300 
+                  text-gray-700 hover:text-[#2E7D32] hover:bg-green-50`}
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <div className="px-4 pt-3">
+              <Button 
+                className={`w-full rounded-xl 
+                  bg-[#2E7D32] hover:bg-[#1B5E20] text-white`}
               >
                 Contactez-nous
               </Button>
             </div>
-
-            {/* Menu Mobile Button */}
-            <div className="md:hidden">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-600 hover:text-green-600 hover:bg-green-50"
-              >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-              </Button>
-            </div>
-          </div>
-        </div>
-      </motion.nav>
-
-      {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
-              onClick={() => setIsOpen(false)}
-            />
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-              className="fixed top-0 right-0 bottom-0 w-[280px] bg-white shadow-2xl z-50 md:hidden"
-            >
-              <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between p-4 border-b">
-                  <span className="text-lg font-semibold text-gray-900">Menu</span>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => setIsOpen(false)}
-                    className="text-gray-600 hover:text-green-600 hover:bg-green-50"
-                  >
-                    <X size={24} />
-                  </Button>
-                </div>
-                <div className="flex-1 overflow-y-auto py-4">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.path}
-                      className={`block px-4 py-3 mx-2 rounded-lg transition-colors duration-300 ${
-                        location.pathname === item.path
-                          ? 'bg-green-50 text-green-600'
-                          : 'text-gray-600 hover:bg-gray-50'
-                      }`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-                <div className="p-4 border-t">
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white rounded-lg">
-                    Contactez-nous
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
-
-      {/* Spacer to prevent content from going under navbar */}
-      <div className="h-20" />
+          </motion.div>
+        </motion.div>
+      </div>
+    </motion.nav>
     </>
   )
 }
