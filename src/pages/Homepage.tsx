@@ -51,33 +51,52 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Chiffres clés */}
-      <section className="py-16 px-4 bg-green-700 text-white">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-center mb-12">Nos Chiffres Clés</h2>
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-5xl font-bold mb-2">15+</div>
-              <div className="text-lg">Années d'expérience</div>
+      {/* Nos Produits */}
+      <section className="py-16 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-800 to-green-950 opacity-90"></div>
+        <div className={`absolute inset-0 bg-[url(${about})] opacity-10`}></div>
+        
+        <div className="container mx-auto max-w-6xl relative">
+          <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-40 h-40 bg-green-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-10 right-0 w-60 h-60 bg-green-600/10 rounded-full blur-3xl"></div>
+          
+          <h2 className="text-4xl font-bold text-center mb-16 text-white relative">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-100 to-white">
+              Nos Produits Phares
+            </span>
+          </h2>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:transform hover:-translate-y-2 border border-white/10">
+              <div className="text-4xl font-bold mb-3 bg-gradient-to-r from-green-300 to-green-100 bg-clip-text text-transparent group-hover:scale-105 transition-transform">NPK</div>
+              <div className="text-lg text-green-100">Engrais composé</div>
+              <p className="mt-3 text-sm text-green-200/70">Idéal pour les cultures vivrières</p>
             </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">50k</div>
-              <div className="text-lg">Hectares accompagnés</div>
+
+            <div className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:transform hover:-translate-y-2 border border-white/10">
+              <div className="text-4xl font-bold mb-3 bg-gradient-to-r from-green-300 to-green-100 bg-clip-text text-transparent group-hover:scale-105 transition-transform">Urée</div>
+              <div className="text-lg text-green-100">46% d'azote</div>
+              <p className="mt-3 text-sm text-green-200/70">Pour tous types de cultures</p>
             </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">1000+</div>
-              <div className="text-lg">Clients satisfaits</div>
+
+            <div className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:transform hover:-translate-y-2 border border-white/10">
+              <div className="text-4xl font-bold mb-3 bg-gradient-to-r from-green-300 to-green-100 bg-clip-text text-transparent group-hover:scale-105 transition-transform">DAP</div>
+              <div className="text-lg text-green-100">Phosphate</div>
+              <p className="mt-3 text-sm text-green-200/70">Excellent pour le démarrage</p>
             </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">25k</div>
-              <div className="text-lg">Tonnes d'engrais/an</div>
+
+            <div className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:transform hover:-translate-y-2 border border-white/10">
+              <div className="text-4xl font-bold mb-3 bg-gradient-to-r from-green-300 to-green-100 bg-clip-text text-transparent group-hover:scale-105 transition-transform">KCl</div>
+              <div className="text-lg text-green-100">Potasse</div>
+              <p className="mt-3 text-sm text-green-200/70">Renforce les cultures</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-16 px-4">
+      {/* Services avec nouvelle transition */}
+      <section className="py-16 px-4 bg-gradient-to-t from-gray-50 to-white relative">
+        <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-green-900/20 to-transparent"></div>
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-center mb-12">Nos Services</h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -114,43 +133,129 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Témoignages */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-center mb-12">Ils nous font confiance</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card>
-              <CardContent className="pt-6">
-                <p className="italic text-gray-600 mb-4">
-                  "Grâce aux produits et conseils de Camagro, nous avons augmenté nos rendements de 40% en deux ans."
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
-                  <div>
-                    <h4 className="font-semibold">Jean Kouam</h4>
-                    <p className="text-sm text-gray-500">Coopérative agricole de l'Ouest</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+      {/* Témoignages avec nouvelle transition */}
+      <section className="relative py-24 overflow-hidden">
+        {/* Éléments de design pour la transition */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-100 via-white to-slate-100"></div>
+          <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-green-900/5 to-transparent"></div>
+          <div className="absolute inset-0">
+            <div className="absolute -top-[500px] -right-[500px] w-[1000px] h-[1000px] rounded-full bg-gradient-to-br from-green-50 to-blue-50 blur-3xl opacity-50"></div>
+            <div className="absolute -bottom-[500px] -left-[500px] w-[1000px] h-[1000px] rounded-full bg-gradient-to-br from-purple-50 to-pink-50 blur-3xl opacity-50"></div>
+          </div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0)_100%)] bg-[length:20px_20px]"></div>
+        </div>
 
-            <Card>
-              <CardContent className="pt-6">
-                <p className="italic text-gray-600 mb-4">
-                  "Un partenaire fiable qui comprend les besoins spécifiques de l'agriculture camerounaise."
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
-                  <div>
-                    <h4 className="font-semibold">Marie Ndongo</h4>
-                    <p className="text-sm text-gray-500">Agricultrice - Région du Centre</p>
+        <div className="container mx-auto max-w-6xl relative">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent inline-block">
+              Ils nous font confiance
+            </h2>
+            <div className="mt-2 w-20 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="group">
+              <div className="relative bg-white rounded-2xl p-8 shadow-[0_0_50px_rgba(0,0,0,0.1)] hover:shadow-[0_0_50px_rgba(0,0,0,0.15)] transition-all duration-500">
+                <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl blur opacity-5 group-hover:opacity-10 transition-opacity"></div>
+                <div className="relative">
+                  <svg className="w-10 h-10 text-gray-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
+                  <p className="italic text-gray-600 mb-6 leading-relaxed">
+                    "Grâce aux produits et conseils de Camagro, nous avons augmenté nos rendements de 40% en deux ans."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-400 rounded-full mr-4 p-[2px]">
+                      <div className="w-full h-full bg-white rounded-full"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-800">Jean Kouam</h4>
+                      <p className="text-sm text-slate-500">Coopérative agricole de l'Ouest</p>
+                    </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
+
+            <div className="group">
+              <div className="relative bg-white rounded-2xl p-8 shadow-[0_0_50px_rgba(0,0,0,0.1)] hover:shadow-[0_0_50px_rgba(0,0,0,0.15)] transition-all duration-500">
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-5 group-hover:opacity-10 transition-opacity"></div>
+                <div className="relative">
+                  <svg className="w-10 h-10 text-gray-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
+                  <p className="italic text-gray-600 mb-6 leading-relaxed">
+                    "Un partenaire fiable qui comprend les besoins spécifiques de l'agriculture camerounaise."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full mr-4 p-[2px]">
+                      <div className="w-full h-full bg-white rounded-full"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-800">Marie Ndongo</h4>
+                      <p className="text-sm text-slate-500">Agricultrice - Région du Centre</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      <footer className="bg-green-950 text-white">
+        <div className="container mx-auto max-w-6xl py-12 px-4">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">CAMAGRO</h3>
+              <p className="text-gray-300 text-sm">
+                Leader camerounais dans l'importation et la distribution d'engrais et d'intrants agricoles.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Liens Rapides</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li><a href="#" className="hover:text-green-400 transition">Accueil</a></li>
+                <li><a href="#" className="hover:text-green-400 transition">Produits</a></li>
+                <li><a href="#" className="hover:text-green-400 transition">Services</a></li>
+                <li><a href="#" className="hover:text-green-400 transition">Contact</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Contact</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li>Douala, Cameroun</li>
+                <li>Tel: +237 233 XX XX XX</li>
+                <li>Email: contact@camagro.cm</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Suivez-nous</h4>
+              <div className="flex space-x-4">
+                <a href="#" className="w-10 h-10 bg-green-800 rounded-full flex items-center justify-center hover:bg-green-700 transition">
+                  <span className="sr-only">Facebook</span>
+                  {/* Icône Facebook */}
+                </a>
+                <a href="#" className="w-10 h-10 bg-green-800 rounded-full flex items-center justify-center hover:bg-green-700 transition">
+                  <span className="sr-only">LinkedIn</span>
+                  {/* Icône LinkedIn */}
+                </a>
+                <a href="#" className="w-10 h-10 bg-green-800 rounded-full flex items-center justify-center hover:bg-green-700 transition">
+                  <span className="sr-only">Twitter</span>
+                  {/* Icône Twitter */}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-green-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+            <p>&copy; {new Date().getFullYear()} CAMAGRO. Tous droits réservés.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
