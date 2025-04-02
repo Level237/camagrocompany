@@ -2,6 +2,8 @@ import { useState } from 'react';
 import HeroSection from '@/components/sections/HeroSection';
 import { motion } from 'framer-motion';
 import NavbarStyle from '@/components/layout/NavbarStyle';
+import hero from "@/assets/hero.jpg"
+import Footer from '@/components/layout/Footer';
 const categories = [
   "Engrais", "Pesticides", "Semences", "Équipements"
 ];
@@ -12,7 +14,7 @@ const Produits = () => {
   return (
     <div className="min-h-screen bg-white">
         <NavbarStyle/>
-      <HeroSection title="Nos Produits" backgroundImage="/images/products-hero.jpg" />
+      <HeroSection title="Nos Produits" backgroundImage={hero} />
 
       {/* Categories Navigation */}
       <div className="bg-white py-8 sticky top-0 z-20 shadow-sm">
@@ -108,6 +110,7 @@ const Produits = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 };
