@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import HeroSection from '@/components/sections/HeroSection';
 import { motion } from 'framer-motion';
-import Navbar from '@/components/layout/Navbar';
+import NavbarStyle from '@/components/layout/NavbarStyle';
 const categories = [
   "Engrais", "Pesticides", "Semences", "Équipements"
 ];
@@ -11,7 +11,7 @@ const Produits = () => {
 
   return (
     <div className="min-h-screen bg-white">
-        <Navbar/>
+        <NavbarStyle/>
       <HeroSection title="Nos Produits" backgroundImage="/images/products-hero.jpg" />
 
       {/* Categories Navigation */}
