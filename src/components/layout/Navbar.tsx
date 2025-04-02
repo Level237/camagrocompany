@@ -2,7 +2,7 @@ import { useState } from "react"
 import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Leaf } from "lucide-react"
+import { Menu, X} from "lucide-react"
 import logo from "@/assets/logo.png"
 import logoWhite from "@/assets/logo-white.png"
 const Navbar = () => {
@@ -24,7 +24,6 @@ const Navbar = () => {
     { name: "Produits", path: "/produits" },
     { name: "Services", path: "/services" },
     { name: "À propos", path: "/about" },
-    { name: "Contact", path: "/contact" },
   ]
 
   return (
