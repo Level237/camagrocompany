@@ -73,12 +73,13 @@ const NavbarStyle = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <Button 
+              <Link
+                to="/contact"
                 className={`rounded-full px-6 
-                  bg-[#2E7D32] hover:bg-[#1B5E20] text-white`}
+                  bg-[#2E7D32] py-3 hover:bg-[#1B5E20] text-white`}
               >
                 Contactez-nous
-              </Button>
+              </Link>
             </motion.div>
           </div>
 
