@@ -6,12 +6,9 @@ import Footer from '@/components/layout/Footer';
 import about from "@/assets/about.png"
 import Loader from '@/components/ui/Loader';
 import { useEffect } from 'react';
-const categories = [
-  "Conseil Agricole", "Distribution", "Formation", "Support Technique"
-];
 
 const Services = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Conseil Agricole");
+  
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -35,30 +32,7 @@ const Services = () => {
         backgroundImage={about} 
       />
 
-      {/* Categories Navigation */}
-      <div className="bg-white py-8 sticky top-0 z-20 shadow-sm">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="flex space-x-8 justify-center overflow-x-auto">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`relative px-4 py-2 text-lg font-medium transition-colors whitespace-nowrap ${
-                  selectedCategory === category ? 'text-green-600' : 'text-gray-600 hover:text-green-500'
-                }`}
-              >
-                {category}
-                {selectedCategory === category && (
-                  <motion.div
-                    layoutId="activeCategory"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-600"
-                  />
-                )}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
+      
 
       {/* Services Grid */}
       <div className="container mx-auto max-w-6xl px-4 py-16">
@@ -127,6 +101,7 @@ const Services = () => {
               </svg>
             </a>
           </motion.div>
+          
         </div>
       </div>
 

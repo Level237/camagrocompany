@@ -27,7 +27,7 @@ const About = () => {
       <NavbarStyle />
       <HeroSection 
         title="À Propos de Nous" 
-        subtitle="Plus de 20 ans d'expertise au service de l'agriculture camerounaise"
+        subtitle="Plus de 5 ans d'expertise au service de l'agriculture camerounaise"
         backgroundImage={about}
       />
 
@@ -43,7 +43,7 @@ const About = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-gray-800">Notre Histoire</h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Depuis notre création en 2000, CAMAGRO s'est engagé à transformer le secteur agricole camerounais en apportant des solutions innovantes et durables aux agriculteurs.
+                Depuis notre création en 2020, CAMAGRO s'est engagé à transformer le secteur agricole camerounais en apportant des solutions innovantes et durables aux agriculteurs.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Notre parcours est marqué par une croissance constante et un engagement inébranlable envers la qualité et l'innovation, faisant de nous un leader reconnu dans le secteur agricole.
