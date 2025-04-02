@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar"
 import Hero from "@/components/sections/Hero"
 import Loader from "@/components/ui/Loader"
 import about from "@/assets/about.png"
+import about2 from "@/assets/about2.jpg"
 import Footer from "@/components/layout/Footer"
 
 const Homepage = () => {
@@ -56,7 +57,7 @@ const Homepage = () => {
       {/* Nos Produits */}
       <section className="py-16 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-800 to-green-950 opacity-90"></div>
-        <div className={`absolute inset-0 bg-[url(${about})] opacity-10`}></div>
+        <div style={{ backgroundImage: `url(${about2})` }} className={`absolute inset-0  opacity-20`}></div>
         
         <div className="container mx-auto max-w-6xl relative">
           <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-40 h-40 bg-green-500/10 rounded-full blur-3xl"></div>
