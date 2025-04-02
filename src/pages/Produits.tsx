@@ -6,12 +6,14 @@ import hero from "@/assets/hero.jpg"
 import Footer from '@/components/layout/Footer';
 import Loader from '@/components/ui/Loader';
 import { useEffect } from 'react';
+import engrais from "@/assets/engrais.jpg"
+import phyto from "@/assets/phyto.jpg"
 const categories = [
   "Engrais", "Pesticides", "Semences", "Équipements"
 ];
 
 const Produits = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Engrais");
+  
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -32,29 +34,7 @@ const Produits = () => {
       <HeroSection title="Nos Produits" backgroundImage={hero} />
 
       {/* Categories Navigation */}
-      <div className="bg-white py-8 sticky top-0 z-20 shadow-sm">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="flex space-x-8 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`relative px-4 py-2 text-lg font-medium transition-colors ${
-                  selectedCategory === category ? 'text-green-600' : 'text-gray-600 hover:text-green-500'
-                }`}
-              >
-                {category}
-                {selectedCategory === category && (
-                  <motion.div
-                    layoutId="activeCategory"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-600"
-                  />
-                )}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
+     
 
       {/* Products Grid */}
       <div className="container mx-auto max-w-6xl px-4 py-12">
@@ -67,7 +47,7 @@ const Produits = () => {
           >
             <div className="aspect-square overflow-hidden">
               <img
-                src="/images/product-1.jpg"
+                src={engrais}
                 alt="NPK"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -84,7 +64,30 @@ const Produits = () => {
               </div>
             </div>
           </motion.div>
-
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <div className="aspect-square overflow-hidden">
+              <img
+                src={phyto}
+                alt="NPK"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-white text-xl font-semibold mb-2">Produits phytosanitaires</h3>
+                <p className="text-gray-200 text-sm">
+                  Engrais composé idéal pour les cultures vivrières
+                </p>
+                <button className="mt-4 px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors">
+                  En savoir plus
+                </button>
+              </div>
+            </div>
+          </motion.div>
           {/* Repeat similar product cards */}
         </div>
       </div>
