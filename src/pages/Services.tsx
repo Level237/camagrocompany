@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import NavbarStyle from '@/components/layout/NavbarStyle';
 import hero from "@/assets/hero.jpg"
 import Footer from '@/components/layout/Footer';
-
+import about from "@/assets/about.png"
 const categories = [
   "Conseil Agricole", "Distribution", "Formation", "Support Technique"
 ];
@@ -18,7 +18,7 @@ const Services = () => {
       <HeroSection 
         title="Nos Services" 
         subtitle="Des solutions adaptées à vos besoins agricoles"
-        backgroundImage={hero} 
+        backgroundImage={about} 
       />
 
       {/* Categories Navigation */}
