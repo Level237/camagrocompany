@@ -3,7 +3,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import NavbarStyle from '@/components/layout/NavbarStyle';
 import Footer from '@/components/layout/Footer';
 import about from "@/assets/about3.jpg"
-
+import about4 from "@/assets/about4.jpg"
 const About = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -41,7 +41,7 @@ const About = () => {
             >
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img 
-                  src={about} 
+                  src={about4} 
                   alt="Notre Histoire" 
                   className="w-full h-full object-cover"
                 />

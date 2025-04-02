@@ -14,7 +14,6 @@ const NavbarStyle = () => {
     { name: "Produits", path: "/produits" },
     { name: "Services", path: "/services" },
     { name: "À propos", path: "/about" },
-    { name: "Contact", path: "/contact" },
   ]
 
   return (
