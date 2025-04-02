@@ -4,7 +4,24 @@ import NavbarStyle from '@/components/layout/NavbarStyle';
 import Footer from '@/components/layout/Footer';
 import about from "@/assets/about3.jpg"
 import about4 from "@/assets/about4.jpg"
+import { useState, useEffect } from 'react';
+import Loader from '@/components/ui/Loader';
 const About = () => {
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    // Simuler un temps de chargement
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 2000) // 2 secondes de chargement
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (isLoading) {
+    return <Loader />
+  }
   return (
     <div className="min-h-screen bg-white">
       <NavbarStyle />

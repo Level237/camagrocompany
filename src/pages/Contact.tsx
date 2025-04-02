@@ -7,8 +7,23 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import contact from "@/assets/contact.jpg";
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
-
+import { useState, useEffect } from 'react';
+import Loader from '@/components/ui/Loader';
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    // Simuler un temps de chargement
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 2000) // 2 secondes de chargement
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (isLoading) {
+    return <Loader />
+  }
   return (
     <div className="min-h-screen bg-white">
       <NavbarStyle />

@@ -2,16 +2,30 @@ import { useState } from 'react';
 import HeroSection from '@/components/sections/HeroSection';
 import { motion } from 'framer-motion';
 import NavbarStyle from '@/components/layout/NavbarStyle';
-import hero from "@/assets/hero.jpg"
 import Footer from '@/components/layout/Footer';
 import about from "@/assets/about.png"
+import Loader from '@/components/ui/Loader';
+import { useEffect } from 'react';
 const categories = [
   "Conseil Agricole", "Distribution", "Formation", "Support Technique"
 ];
 
 const Services = () => {
   const [selectedCategory, setSelectedCategory] = useState("Conseil Agricole");
+  const [isLoading, setIsLoading] = useState(true)
 
+  useEffect(() => {
+    // Simuler un temps de chargement
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 2000) // 2 secondes de chargement
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (isLoading) {
+    return <Loader />
+  }
   return (
     <div className="min-h-screen bg-white">
       <NavbarStyle />
