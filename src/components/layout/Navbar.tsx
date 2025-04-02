@@ -143,7 +143,7 @@ const Navbar = () => {
             className={`py-4 px-2 rounded-2xl mb-4 backdrop-blur-lg ${
               isScrolled 
                 ? 'bg-white shadow-lg' 
-                : 'bg-white/10'
+                : 'bg-white/30'
             }`}
           >
             {navItems.map((item) => (
