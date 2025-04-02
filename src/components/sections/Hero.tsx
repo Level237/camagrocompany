@@ -43,10 +43,10 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button size="lg" className="bg-white text-[#2E7D32] hover:bg-green-50 font-semibold">
-                Découvrir nos produits
+                 nos produits
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
+              <Button size="lg" variant="ghost" className="border border-white text-white hover:bg-white/20">
                 Nos services
               </Button>
             </div>
