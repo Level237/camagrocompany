@@ -7,6 +7,7 @@ import Loader from "@/components/ui/Loader"
 import about from "@/assets/about.png"
 import about2 from "@/assets/about2.jpg"
 import Footer from "@/components/layout/Footer"
+import { Link } from "react-router-dom"
 
 const Homepage = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -39,9 +40,9 @@ const Homepage = () => {
                 Leader camerounais dans l'importation et la distribution d'engrais et d'intrants agricoles, 
                 nous accompagnons le développement de l'agriculture africaine depuis plus de 15 ans.
               </p>
-              <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
+              <Link to="/about" className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
                 Découvrir notre histoire
-              </button>
+              </Link>
             </div>
             <div className="rounded-xl overflow-hidden shadow-2xl">
               <img 
