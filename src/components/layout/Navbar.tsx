@@ -129,7 +129,8 @@ const Navbar = () => {
             opacity: 1,
             transition: {
               height: { duration: 0.3 },
-              opacity: { duration: 0.2 }
+              opacity: { duration: 0.1 },
+              
             }
           } : { 
             height: 0, 
@@ -142,10 +143,10 @@ const Navbar = () => {
           className="md:hidden overflow-hidden"
         >
           <motion.div 
-            className={`py-4 px-2 rounded-2xl mb-4 backdrop-blur-lg ${
+            className={`py-4 px-2 rounded-2xl mb-4 backdrop-blur-xl ${
               isScrolled 
                 ? 'bg-white shadow-lg' 
-                : 'bg-white/30'
+                : 'bg-white/90'
             }`}
           >
             {navItems.map((item) => (
@@ -155,7 +156,7 @@ const Navbar = () => {
                 className={`block px-4 py-3 rounded-xl transition-colors duration-300 ${
                   isScrolled 
                     ? 'text-gray-700 hover:text-[#2E7D32] hover:bg-green-50' 
-                    : 'text-white hover:bg-white/10'
+                    : 'text-[#2E7D32] hover:bg-white/10'
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -169,7 +170,7 @@ const Navbar = () => {
                 className={`w-full rounded-xl ${
                   isScrolled 
                     ? 'bg-[#2E7D32] hover:bg-[#1B5E20] text-white' 
-                    : 'bg-white text-[#2E7D32] hover:bg-green-50'
+                    : 'bg-[#2E7D32] text-white hover:bg-green-50'
                 }`}
               >
 

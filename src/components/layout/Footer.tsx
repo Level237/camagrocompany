@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-300">
-                <li>Douala, Cameroun</li>
+                <li>Yaoundé, Cameroun</li>
                 <li>Tel: +237 233 XX XX XX</li>
                 <li>Email: contact@camagro.cm</li>
               </ul>
