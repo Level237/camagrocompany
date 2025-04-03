@@ -63,11 +63,11 @@ const Hero = () => {
                 <div className="text-sm text-white/80">Naturel</div>
               </div>
               <div>
-                <div className="text-3xl font-bold">50+</div>
+                <div className="text-3xl font-bold">10+</div>
                 <div className="text-sm text-white/80">Agriculteurs</div>
               </div>
               <div>
-                <div className="text-3xl font-bold">10ans</div>
+                <div className="text-3xl font-bold">5ans</div>
                 <div className="text-sm text-white/80">d'expertise</div>
               </div>
             </div>

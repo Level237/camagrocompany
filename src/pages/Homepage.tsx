@@ -35,7 +35,14 @@ const Homepage = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">CAMAGRO</h2>
+              <h2 className="text-4xl font-bold mb-6">CAM AGRO</h2>
+              <div className="rounded-xl max-sm:block hidden mb-8 overflow-hidden shadow-2xl">
+              <img 
+                src={about} 
+                alt="Agriculture moderne" 
+                className="w-full h-[400px] object-cover"
+              />
+            </div>
               <p className="text-lg text-gray-700 mb-6">
                 Leader camerounais dans l'importation et la distribution d'engrais et d'intrants agricoles, 
                 nous accompagnons le développement de l'agriculture africaine depuis plus de 15 ans.
@@ -44,7 +51,7 @@ const Homepage = () => {
                 Découvrir notre histoire
               </Link>
             </div>
-            <div className="rounded-xl overflow-hidden shadow-2xl">
+            <div className="rounded-xl max-sm:hidden overflow-hidden shadow-2xl">
               <img 
                 src={about} 
                 alt="Agriculture moderne" 
