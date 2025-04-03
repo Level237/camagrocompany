@@ -88,6 +88,7 @@ const Navbar = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
+              <Link to="/contact">  
               <Button 
                 className={`rounded-full px-6 ${
                   isScrolled 
@@ -97,6 +98,7 @@ const Navbar = () => {
               >
                 Contactez-nous
               </Button>
+              </Link>
             </motion.div>
           </div>
 
@@ -161,15 +163,19 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="px-4 pt-3">
-              <Button 
+              <Link to="/contact">
+              <Button
+
                 className={`w-full rounded-xl ${
                   isScrolled 
                     ? 'bg-[#2E7D32] hover:bg-[#1B5E20] text-white' 
                     : 'bg-white text-[#2E7D32] hover:bg-green-50'
                 }`}
               >
+
                 Contactez-nous
               </Button>
+              </Link>
             </div>
           </motion.div>
         </motion.div>

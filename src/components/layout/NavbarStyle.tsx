@@ -10,7 +10,6 @@ const NavbarStyle = () => {
  
 
   const navItems = [
-    { name: "Accueil", path: "/" },
     { name: "Produits", path: "/produits" },
     { name: "Services", path: "/services" },
     { name: "À propos", path: "/about" },
