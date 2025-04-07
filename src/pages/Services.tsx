@@ -127,7 +127,7 @@ const Services = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-2">Expertise</h3>
-              <p className="text-gray-600">Plus de 20 ans d'expérience</p>
+              <p className="text-gray-600">Plus de 05 ans d'expertise</p>
             </div>
 
             <div className="text-center">

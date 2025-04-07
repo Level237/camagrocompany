@@ -126,28 +126,19 @@ const About = () => {
           >
             Notre Équipe
           </motion.h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3">
             {[
               {
-                name: "Jean Kouassi",
+                name: "Ngoufo Roger",
                 role: "Directeur Général",
                 image: "/images/team-1.jpg"
               },
               {
-                name: "Marie Ndongo",
-                role: "Responsable Technique",
+                name: "Mamangollo Mpah Merveille",
+                role: "Ingenieur Agronome Controlleur normes et qualité",
                 image: "/images/team-2.jpg"
               },
-              {
-                name: "Paul Tamba",
-                role: "Expert Agronome",
-                image: "/images/team-3.jpg"
-              },
-              {
-                name: "Sarah Eyenga",
-                role: "Responsable Commercial",
-                image: "/images/team-4.jpg"
-              }
+             
             ].map((member, index) => (
               <motion.div
                 key={member.name}

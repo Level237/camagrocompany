@@ -41,19 +41,19 @@ const Contact = () => {
               {
                 icon: <Phone className="w-6 h-6" />,
                 title: "Téléphone",
-                info: "+237 123 456 789",
+                info: "+237 672 944 528",
                 color: "bg-blue-500"
               },
               {
                 icon: <Mail className="w-6 h-6" />,
                 title: "Email",
-                info: "contact@camagro.com",
+                info: "contact@camagrocompany.com",
                 color: "bg-green-500"
               },
               {
                 icon: <MapPin className="w-6 h-6" />,
                 title: "Adresse",
-                info: "Douala, Cameroun",
+                info: "Yaoundé, Cameroun",
                 color: "bg-purple-500"
               },
               {
@@ -136,7 +136,7 @@ const Contact = () => {
               {/* Map */}
               <div className="rounded-2xl overflow-hidden shadow-lg h-[300px] bg-gray-200">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254744.54821959847!2d9.765764228697799!3d4.050864852537935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061128f4c118b5%3A0x97c8e530a95fb70c!2sDouala%2C%20Cameroun!5e0!3m2!1sfr!2sfr!4v1647081577713!5m2!1sfr!2sfr"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254744.54821959847!2d9.765764228697799!3d4.050864852537935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061128f4c118b5%3A0x97c8e530a95fb70c!2sYaoundé%2C%20Cameroun!5e0!3m2!1sfr!2sfr!4v1647081577713!5m2!1sfr!2sfr"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -157,7 +157,7 @@ const Contact = () => {
                   </p>
                   <div className="pt-4 border-t">
                     <p className="font-semibold text-gray-800">Urgence technique :</p>
-                    <p className="text-green-600">+237 123 456 789</p>
+                    <p className="text-green-600">+237 672 944 528</p>
                   </div>
                 </div>
               </div>

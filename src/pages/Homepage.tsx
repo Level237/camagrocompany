@@ -35,7 +35,7 @@ const Homepage = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">CAM AGRO</h2>
+              <h2 className="text-4xl font-bold mb-6">CAMEROON AGROBUSINESS COMPANY AGRICULTURE</h2>
               <div className="rounded-xl max-sm:block hidden mb-8 overflow-hidden shadow-2xl">
               <img 
                 src={about} 
@@ -181,8 +181,8 @@ const Homepage = () => {
                       <div className="w-full h-full bg-white rounded-full"></div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-800">Jean Kouam</h4>
-                      <p className="text-sm text-slate-500">Coopérative agricole de l'Ouest</p>
+                      <h4 className="font-semibold text-slate-800">Yves Minsili</h4>
+                     
                     </div>
                   </div>
                 </div>
@@ -205,7 +205,7 @@ const Homepage = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-800">Marie Ndongo</h4>
-                      <p className="text-sm text-slate-500">Agricultrice - Région du Centre</p>
+                     
                     </div>
                   </div>
                 </div>
