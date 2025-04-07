@@ -45,7 +45,7 @@ const Homepage = () => {
             </div>
               <p className="text-lg text-gray-700 mb-6">
                 Leader camerounais dans l'importation et la distribution d'engrais et d'intrants agricoles, 
-                nous accompagnons le développement de l'agriculture africaine depuis plus de 15 ans.
+                nous accompagnons le développement de l'agriculture africaine depuis plus de 5 ans.
               </p>
               <Link to="/about" className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
                 Découvrir notre histoire
