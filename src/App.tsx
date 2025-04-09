@@ -1,9 +1,18 @@
 import { RouterProvider } from 'react-router-dom'
 import routes from './routes/route'
-
-function App() {
+import { Helmet } from 'react-helmet-async'
+import HelmetProvider from './contexts/HelmetContext'
+function App(props: any) {
   return (
-    <RouterProvider router={routes}/>
+    <>
+			<Helmet>
+				<title>ViteSSR + React + Helmet</title>
+			</Helmet>
+
+			<HelmetProvider>
+				{props.children}
+			</HelmetProvider>
+		</>
   )
 }
 
