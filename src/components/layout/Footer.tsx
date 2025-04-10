@@ -1,13 +1,11 @@
 import React from 'react';
-import logo from "@/assets/logo-white.png"
-
 const Footer: React.FC = () => {
   return (
     <footer className="bg-green-950 text-white">
         <div className="container mx-auto max-w-6xl py-12 px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div className='-mt-12 '>
-              <img src={logo} alt="logo" className="w-36 mb-8" />
+              <img src={"/public/logo-white.png"} alt="logo" className="w-36 mb-8" />
               <p className="text-gray-300 -mt-12 text-sm">
                 Leader camerounais dans l'importation et la distribution d'engrais et d'intrants agricoles.
               </p>

@@ -5,7 +5,6 @@ import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import contact from "@/assets/contact.jpg";
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Loader from '@/components/ui/Loader';
@@ -30,7 +29,7 @@ const Contact = () => {
       <HeroSection 
         title="Contactez-nous" 
         subtitle="Notre équipe est à votre écoute pour répondre à vos besoins"
-        backgroundImage={contact}
+        backgroundImage={"/public/contact.jpg"}
       />
 
       {/* Contact Info Cards */}

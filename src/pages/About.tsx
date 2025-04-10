@@ -2,8 +2,7 @@ import { motion } from 'framer-motion';
 import HeroSection from '@/components/sections/HeroSection';
 import NavbarStyle from '@/components/layout/NavbarStyle';
 import Footer from '@/components/layout/Footer';
-import about from "@/assets/about3.jpg"
-import about4 from "@/assets/about4.jpg"
+
 import { useState, useEffect } from 'react';
 import Loader from '@/components/ui/Loader';
 const About = () => {
@@ -28,7 +27,7 @@ const About = () => {
       <HeroSection 
         title="À Propos de Nous" 
         subtitle="Plus de 5 ans d'expertise au service de l'agriculture camerounaise"
-        backgroundImage={about}
+        backgroundImage={"/public/about3.jpg"}
       />
 
       {/* Histoire et Mission */}
@@ -58,7 +57,7 @@ const About = () => {
             >
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img 
-                  src={about4} 
+                  src={"/public/about4.jpg"} 
                   alt="Notre Histoire" 
                   className="w-full h-full object-cover"
                 />

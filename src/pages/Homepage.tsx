@@ -4,8 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Navbar from "@/components/layout/Navbar"
 import Hero from "@/components/sections/Hero"
 import Loader from "@/components/ui/Loader"
-import about from "@/assets/about.png"
-import about2 from "@/assets/about2.jpg"
+
 import Footer from "@/components/layout/Footer"
 import { Link } from "react-router-dom"
 
@@ -38,7 +37,7 @@ const Homepage = () => {
               <h2 className="text-4xl font-bold mb-6">CAMEROON AGROBUSINESS COMPANY AGRICULTURE</h2>
               <div className="rounded-xl max-sm:block hidden mb-8 overflow-hidden shadow-2xl">
               <img 
-                src={about} 
+                src={"/public/about.png"} 
                 alt="Agriculture moderne" 
                 className="w-full h-[400px] object-cover"
               />
@@ -53,7 +52,7 @@ const Homepage = () => {
             </div>
             <div className="rounded-xl max-sm:hidden overflow-hidden shadow-2xl">
               <img 
-                src={about} 
+                src={"/public/about2.jpg"} 
                 alt="Agriculture moderne" 
                 className="w-full h-[400px] object-cover"
               />
@@ -65,7 +64,7 @@ const Homepage = () => {
       {/* Nos Produits */}
       <section className="py-16 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-800 to-green-950 opacity-90"></div>
-        <div style={{ backgroundImage: `url(${about2})` }} className={`absolute inset-0  opacity-20`}></div>
+        <div style={{ backgroundImage: `url(${'/public/about2.jpg'})` }} className={`absolute inset-0  opacity-20`}></div>
         
         <div className="container mx-auto max-w-6xl relative">
           <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-40 h-40 bg-green-500/10 rounded-full blur-3xl"></div>

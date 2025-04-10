@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import { Link} from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-import logo from "@/assets/logo.png"
+
 
 const NavbarStyle = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -43,7 +43,7 @@ const NavbarStyle = () => {
                   text-[#2E7D32]
               }`}
             >
-              <img src={logo} alt="logo" className="w-36 h-36" />
+              <img src={'/public/logo.png'} alt="logo" className="w-36 h-36" />
               
             </Link>
           </motion.div>

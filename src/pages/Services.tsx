@@ -3,7 +3,6 @@ import HeroSection from '@/components/sections/HeroSection';
 import { motion } from 'framer-motion';
 import NavbarStyle from '@/components/layout/NavbarStyle';
 import Footer from '@/components/layout/Footer';
-import about from "@/assets/about.png"
 import Loader from '@/components/ui/Loader';
 import { useEffect } from 'react';
 
@@ -29,7 +28,7 @@ const Services = () => {
       <HeroSection 
         title="Nos Services" 
         subtitle="Des solutions adaptées à vos besoins agricoles"
-        backgroundImage={about} 
+        backgroundImage={"/public/about/png"} 
       />
 
       
