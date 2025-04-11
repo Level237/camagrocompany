@@ -7,6 +7,7 @@ import Loader from "@/components/ui/Loader"
 
 import Footer from "@/components/layout/Footer"
 import { Link } from "react-router-dom"
+import { Helmet } from "react-helmet-async"
 
 const Homepage = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -25,6 +26,33 @@ const Homepage = () => {
   }
 
   return (
+
+    <>
+    <Helmet>
+      <title>Cameroon Agrobusiness Company Agriculture</title>
+      <link rel="icon" type="image/svg+xml" href={'/public/logo-white.png'} />
+      <meta name="robots" content="index, follow" />
+      <link rel='canonical' href={ window.location.href } />
+      <meta name='description' content='Cameroon Agrobusiness Company Agriculture'/>
+      <meta name='keywords' content='cameroon,agrobusiness,agriculture,company,agriculture,cameroon,agrobusiness,agriculture,company' />
+      <meta property="og:url" content={window.location.href} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Cameroon Agrobusiness Company Agriculture" />
+      <meta property="og:url" content="camagrocompany.com" />
+      <meta property="og:image" content={'/public/logo-white.png'} />
+      <meta property="og:image:secure_url" content={'/public/logo-white.png'} />
+            <meta property="og:image:type" content="image/jpeg" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:image:alt" content={`Logo site`} />
+            <meta name="twitter:creator" content="fecascrab" />
+            <meta name="twitter:card" content="Féderation Camerounaise de Scrabble" />
+            <meta name="twitter:title" content="Féderation Camerounaise de Scrabble" />
+            <meta name="twitter:site" content="https://fecascrab.com" />
+            <meta name="twitter:image" content={'/public/logo-white.png'} />
+            <meta name="twitter:description" content='scrabble,cameroun,féderation camerounaise,cameroon,compétition scrabble,scraper,jeu de société,mot' />
+    </Helmet>
+
     <div className="min-h-screen">
       <Navbar />
       <Hero />
@@ -215,6 +243,8 @@ const Homepage = () => {
       </section>
       <Footer />
     </div>
+    </>
+
   )
 }
 
