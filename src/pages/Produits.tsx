@@ -6,9 +6,10 @@ import hero from "@/assets/hero.jpg"
 import Footer from '@/components/layout/Footer';
 import Loader from '@/components/ui/Loader';
 import { useEffect } from 'react';
-import engrais from "@/assets/engrais.jpg"
-import phyto from "@/assets/phyto.jpg"
-
+import agrovert from "@/assets/agrovert.jpg"
+import camagro from "@/assets/camagro.jpg"
+import produit1 from "@/assets/produit1.jpg"
+import produit2 from "@/assets/produit2.jpg"
 
 const Produits = () => {
   
@@ -45,16 +46,16 @@ const Produits = () => {
           >
             <div className="aspect-square overflow-hidden">
               <img
-                src={engrais}
+                src={agrovert}
                 alt="NPK"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-white text-xl font-semibold mb-2">Engrais</h3>
+                <h3 className="text-white text-xl font-semibold mb-2">Agrovert</h3>
                 <p className="text-gray-200 text-sm">
-                  Engrais composé idéal pour les cultures vivrières
+                  Agrovert est un engrais composé idéal pour les cultures vivrières
                 </p>
                 <button className="mt-4 px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors">
                   En savoir plus
@@ -69,16 +70,64 @@ const Produits = () => {
           >
             <div className="aspect-square overflow-hidden">
               <img
-                src={phyto}
+                src={camagro}
                 alt="NPK"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-white text-xl font-semibold mb-2">Produits phytosanitaires</h3>
+                <h3 className="text-white text-xl font-semibold mb-2">Camagro</h3>
                 <p className="text-gray-200 text-sm">
-                  Engrais composé idéal pour les cultures vivrières
+                  Camagro est un produit phytosanitaire idéal pour les cultures vivrières
+                </p>
+                <button className="mt-4 px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors">
+                  En savoir plus
+                </button>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <div className="aspect-square overflow-hidden">
+              <img
+                src={produit1}
+                alt="NPK"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-white text-xl font-semibold mb-2">Sprayer</h3>
+                <p className="text-gray-200 text-sm">
+                Optimisez vos traitements grâce à notre pulvérisateur de haute précision. Conçu pour assurer une couverture uniforme de vos cultures.
+                </p>
+                <button className="mt-4 px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors">
+                  En savoir plus
+                </button>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <div className="aspect-square overflow-hidden">
+              <img
+                src={produit2}
+                alt="NPK"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-white text-xl font-semibold mb-2">NPK</h3>
+                <p className="text-gray-200 text-sm">
+                NPK est Utilisé au bon dosage, l’engrais NPK améliore la santé de vos cultures, augmente les rendements et favorise un développement équilibré.
                 </p>
                 <button className="mt-4 px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors">
                   En savoir plus
