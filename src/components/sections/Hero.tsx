@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Leaf, Sprout, Sun } from "lucide-react"
+import hero from "@/assets/hero.jpg"
 import { Link } from "react-router-dom"
 const Hero = () => {
   return (
@@ -107,7 +108,7 @@ const Hero = () => {
               <div className="absolute inset-12 bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-md rounded-full overflow-hidden shadow-[0_0_50px_rgba(255,255,255,0.2)] border border-white/30">
                 <div className="absolute inset-0 bg-gradient-to-t from-green-500/20 to-transparent mix-blend-overlay"></div>
                 <img 
-                  src={"/public/hero.jpg"} 
+                  src={hero} 
                   alt="Agriculture durable"
                   className="w-full h-full object-cover scale-[1.02] hover:scale-[1.05] transition-transform duration-700 ease-out"
                 />

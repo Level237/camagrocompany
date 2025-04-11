@@ -3,6 +3,8 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Menu, X} from "lucide-react"
+import logo from "@/assets/logo.png"
+import logoWhite from "@/assets/logo-white.png"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -52,9 +54,9 @@ const Navbar = () => {
               }`}
             >
               {isScrolled ? (
-                <img src={"/public/logo.png"} alt="logo" className="w-36 h-36" />
+                <img src={logo} alt="logo" className="w-36 h-36" />
               ) : (
-                <img src={"/public/logo-white.png"} alt="logo" className="w-36 h-36" />
+                <img src={logoWhite} alt="logo" className="w-36 h-36" />
               )}
               
             </Link>
