@@ -2,9 +2,12 @@ import { useState } from 'react';
 import HeroSection from '@/components/sections/HeroSection';
 import { motion } from 'framer-motion';
 import NavbarStyle from '@/components/layout/NavbarStyle';
+import hero from "@/assets/hero.jpg"
 import Footer from '@/components/layout/Footer';
 import Loader from '@/components/ui/Loader';
 import { useEffect } from 'react';
+import engrais from "@/assets/engrais.jpg"
+import phyto from "@/assets/phyto.jpg"
 
 
 const Produits = () => {
@@ -26,7 +29,7 @@ const Produits = () => {
   return (
     <div className="min-h-screen bg-white">
         <NavbarStyle/>
-      <HeroSection title="Nos Produits" backgroundImage={"/public/hero.jpg"} />
+      <HeroSection title="Nos Produits" backgroundImage={hero} />
 
       {/* Categories Navigation */}
      
@@ -42,7 +45,7 @@ const Produits = () => {
           >
             <div className="aspect-square overflow-hidden">
               <img
-                src={"/public/engrais.jpg"}
+                src={engrais}
                 alt="NPK"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -66,7 +69,7 @@ const Produits = () => {
           >
             <div className="aspect-square overflow-hidden">
               <img
-                src={"/public/phyto.jpg"}
+                src={phyto}
                 alt="NPK"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
