@@ -6,6 +6,8 @@ import about from "@/assets/about3.jpg"
 import about4 from "@/assets/about4.jpg"
 import { useState, useEffect } from 'react';
 import Loader from '@/components/ui/Loader';
+import man from "@/assets/man.png"
+import woman from "@/assets/R.png"
 const About = () => {
 
   const [isLoading, setIsLoading] = useState(true)
@@ -129,15 +131,15 @@ const About = () => {
           <div className="grid md:grid-cols-3">
             {[
               {
-                name: "Ngoufo Roger",
+                name: "KEUMOE SYLVAIN DONALD",
                 role: "Directeur Général",
-                image: "/images/team-1.jpg"
+                image: man
               },
               {
-                name: "Mamangollo Mpah Merveille",
-                role: "Ingenieur Agronome Controlleur normes et qualité",
-                image: "/images/team-2.jpg"
-              },
+                name: "Mamangollo Mpah Merveille Raïssa",
+                role: "Responsable Normes et Qualité",
+                image: woman
+              }
              
             ].map((member, index) => (
               <motion.div
