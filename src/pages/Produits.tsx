@@ -194,7 +194,7 @@ const Produits = () => {
                 
                 <div className="flex justify-between items-center">
                   <a
-                    href={`https://wa.me/+237672944528?text=Je suis intéressé par le produit ${selectedProduct.name}`}
+                    href={`https://wa.me/+237620173193?text=Je suis intéressé par le produit ${selectedProduct.name}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
