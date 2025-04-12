@@ -128,7 +128,7 @@ const About = () => {
           >
             Notre Équipe
           </motion.h2>
-          <div className="grid md:grid-cols-3">
+          <div className="grid md:grid-cols-4">
             {[
               {
                 name: "KEUMOE SYLVAIN DONALD",
@@ -136,10 +136,18 @@ const About = () => {
                 image: man
               },
               {
-                name: "Mamangollo Mpah Merveille Raïssa",
-                role: "Responsable Normes et Qualité",
+                name: "Sarah Eyenga",
+                role: "Responsable Commercial",
                 image: woman
-              }
+              }, {
+                name: "Paul Tamba",
+                role: "Expert Agronome",
+                image: man
+              },  {
+                name: "Marie Ndongo",
+                role: "Responsable Technique",
+                image: woman
+              },
              
             ].map((member, index) => (
               <motion.div
